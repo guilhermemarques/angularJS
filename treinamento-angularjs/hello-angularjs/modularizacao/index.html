@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Hello AngularJS</title>
+
+	<!-- Importação do AngularJS pela CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+	
+	<!-- Importação dos recursos da app -->
+	<script src="js/app.js"></script>
+	<script src="js/myController.js"></script>
+
+</head>
+
+<!-- Definição da aplicação "Módulo" -->
+<body ng-app="myApp">
+
+	<!-- Definição da utilização do controlador -->
+	<div ng-controller="MyController">
+
+		<input type="text" ng-model="name">
+
+		<input type="button" value="Salvar" ng-click="save()">
+
+	</div>
+
+	<!-- Exemplo de restrição do escopo do controlador -->
+	<h1>{{nome}}</h1>
+
+</body>
+</html>

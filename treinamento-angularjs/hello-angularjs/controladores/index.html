@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Hello AngularJS</title>
+
+	<!-- Importação do AngularJS pela CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+	
+	<!-- Criação dos controladores -->
+	<script>
+		function MeuControlador($scope) {
+			$scope.nome = "";
+
+			$scope.salvar = function() {
+				console.log("Meu nome é: " + $scope.nome);
+			};
+		}
+	</script>
+
+</head>
+
+<!-- Definição da aplicação -->
+<body ng-app="">
+
+	<!-- Definição da utilização do controlador -->
+	<div ng-controller="MeuControlador">
+
+		<input type="text" ng-model="nome">
+
+		<input type="button" value="Salvar" ng-click="salvar()">
+
+	</div>
+
+	<!-- Exemplo de restrição do escopo do controlador -->
+	<h1>{{nome}}</h1>
+
+</body>
+</html>

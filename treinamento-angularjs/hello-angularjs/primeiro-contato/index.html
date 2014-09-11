@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello AngularJS</title>
+
+	<!-- Importação do AngularJS pela CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+</head>
+
+<!-- ng-app define para o Bootstrap do Angular uma aplicação a ser processada -->
+<body ng-app="">
+
+	<label for="name">Name:</label>
+	
+	<!-- ng-model referencia um imput a um modelo -->
+	<input type="text" id="name" ng-model="name">
+
+	<!-- {{}} define uma expreção angular -->
+	<h1>Hello {{name}}</h1>
+
+</body>
+</html>
